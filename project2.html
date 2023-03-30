@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interesting Reads about Bitcoin</title>
+    <title>Collegiate Photography Contest</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,56 +11,85 @@
             padding: 0;
         }
 
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 16px;
-            padding: 16px;
+        .hero {
+            background-image: url('background-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
         }
 
-        .article {
-            background-color: #f1f1f1;
-            border-radius: 5px;
-            padding: 16px;
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
         }
 
-        .article h3 {
-            margin-top: 0;
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
         }
 
-        .article a {
+        .hero a {
+            background-color: #F66733;
+            color: white;
             text-decoration: none;
-            color: #0077cc;
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+            font-size: 1.2rem;
         }
 
-        .article a:hover {
-            text-decoration: underline;
+        .hero a:hover {
+            background-color: #D94412;
+        }
+
+        .interest-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            background-color: #ECECEC;
+        }
+
+        .interest-form h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .interest-form input[type="submit"] {
+            background-color: #522D80;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .interest-form input[type="submit"]:hover {
+            background-color: #3C1A57;
         }
     </style>
 </head>
 <body>
-    <h1>Interesting Reads about Bitcoin</h1>
-    <div class="container">
-        <div class="article">
-            <h3>Article 1: Bitcoin Predicted to Hit $1 Million</h3>
-            <p>Replace this text with a short summary of the article and a link to the source.</p>
-            <a href="#">Read more</a>
-        </div>
-        <div class="article">
-            <h3>Article 2: Bitcoin's Path to $1 Million</h3>
-            <p>Replace this text with a short summary of the article and a link to the source.</p>
-            <a href="#">Read more</a>
-        </div>
-        <div class="article">
-            <h3>Article 3: Why Bitcoin Will Surpass $1 Million</h3>
-            <p>Replace this text with a short summary of the article and a link to the source.</p>
-            <a href="#">Read more</a>
-        </div>
-        <div class="article">
-            <h3>Article 4: Experts Predict Bitcoin Will Reach $1 Million</h3>
-            <p>Replace this text with a short summary of the article and a link to the source.</p>
-            <a href="#">Read more</a>
-        </div>
+    <div class="hero">
+        <h1>Collegiate Photography Contest</h1>
+        <p>Showcase Your Talent &amp; Join Our Team!</p>
+        <a href="#">Learn More &amp; Register</a>
+    </div>
+    <div class="interest-form">
+        <h2>Interested in the contest or job opportunity?</h2>
+        <p>Enter your email to receive more information:</p>
+        <form action="#" method="post">
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="submit" value="Subscribe">
+        </form>
     </div>
 </body>
 </html>
+
