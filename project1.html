@@ -1,35 +1,123 @@
-<!DOCTYPE html> 
-<html> 
-<head> 
-<title>Project 1</title> 
-<style> 
-.navbar { 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  background-color: #333; 
-  color: white; 
-  height: 50px; 
-  padding: 0 20px; 
-} 
-.navbar a { 
-  color: white; 
-  text-decoration: none; 
-} 
-.navbar a:hover { 
-  text-decoration: underline; 
-} 
-</style> 
-</head> 
-<body> 
-<nav> 
-<div class="navbar"> 
-<a href="index.html">km8projects</a> 
-<a href="contact.html">Contact Us</a> 
-<a href="project1.html">Project 1</a> 
-<a href="project2.html">Project 2</a> 
-</div> 
-</nav> 
-<h1>Project 1</h1> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project 1 | KM8Projects</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: 'Montserrat', sans-serif;
+		}
+		.header {
+			background-color: #000;
+			height: 50px;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1;
+		}
+		.header h1 {
+			color: #fff;
+			font-size: 24px;
+			font-weight: 700;
+			margin: 0;
+			padding: 10px;
+			line-height: 30px;
+			display: inline-block;
+		}
+		.container {
+			margin-top: 80px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			height: calc(100vh - 80px);
+		}
+		.button {
+			display: inline-block;
+			padding: 20px 40px;
+			margin: 10px;
+			background-color: #333;
+			color: #fff;
+			border-radius: 5px;
+			text-decoration: none;
+			transition: background-color 0.3s ease;
+		}
+		.button:hover {
+			background-color: #555;
+		}
+		.phone {
+			width: 300px;
+			height: 600px;
+			border: 1px solid #000;
+			position: relative;
+			margin: auto;
+		}
+		.phone:before {
+			content: "";
+			display: block;
+			width: 260px;
+			height: 550px;
+			background-color: #fff;
+			position: absolute;
+			top: 25px;
+			left: 20px;
+		}
+		.phone:after {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 20px;
+			background-color: #000;
+			position: absolute;
+			top: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			border-radius: 50%;
+			z-index: 1;
+		}
+		.pc {
+			width: 400px;
+			height: 300px;
+			border: 1px solid #000;
+			position: relative;
+			margin: auto;
+		}
+		.pc:before {
+			content: "";
+			display: block;
+			width: 360px;
+			height: 240px;
+			background-color: #fff;
+			position: absolute;
+			top: 30px;
+			left: 20px;
+		}
+		.pc:after {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 20px;
+			background-color: #000;
+			position: absolute;
+			top: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+			border-radius: 50%;
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1>KM8Projects</h1>
+	</div>
+	<div class="container">
+		<div class="phone"></div>
+		<div class="pc"></div>
+	</div>
+	<a href="index.html" class="button">Back to Projects</a>
+</body>
+</html>
