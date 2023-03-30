@@ -1,68 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bitcoin Market Insights</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-    }
-    .container {
-      display: flex;
-      justify-content: space-between;
-    }
-    .column {
-      width: 31%;
-      margin-bottom: 20px;
-    }
-    #bullish-articles {
-      color: green;
-    }
-    #bearish-articles {
-      color: red;
-    }
-    #market-says {
-      color: #333;
-    }
-    h1, h2 {
-      margin-top: 0;
-      border-bottom: 2px solid;
-      padding-bottom: 5px;
-    }
-    .article {
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      padding: 10px;
-      margin-bottom: 10px;
-      background-color: #f9f9f9;
-    }
-    p.intro {
-      font-size: 1.2em;
-      font-weight: bold;
-      text-align: justify;
-    }
-  </style>
-</head>
-<body>
-  <h1>Bitcoin Market Insights</h1>
-  <p class="intro">
-    Welcome to Bitcoin Market Insights, your one-stop destination for the latest research and perspectives on the dynamic world of Bitcoin. We bring together bullish, bearish, and market-driven analyses to help you stay informed and make well-rounded investment decisions. Our carefully curated articles offer a diverse range of opinions from top experts, ensuring you have a comprehensive understanding of the ever-evolving cryptocurrency landscape.
-  </p>
-  <div class="container">
-    <div class="column" id="bullish-articles">
-      <h2>Bullish Articles</h2>
-      <!-- Bullish articles will be added here -->
+<html>
+  <head>
+    <title>Bitcoin Market Insights</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 20px;
+      }
+      h3 {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      p {
+        font-size: 16px;
+      }
+      hr {
+        border-top: 1px solid #ccc;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      .row > div {
+        margin-bottom: 20px;
+      }
+      .bearish {
+        background-color: #ffb3b3;
+        padding: 20px;
+        border-radius: 5px;
+      }
+      .bullish {
+        background-color: #b3ffcc;
+        padding: 20px;
+        border-radius: 5px;
+      }
+      .insights {
+        background-color: #b3b3ff;
+        padding: 20px;
+        border-radius: 5px;
+      }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Get bitcoin price from Coingecko API
+        $.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd", function(data) {
+          $("#btc-price").text("$" + data.bitcoin.usd.toLocaleString());
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Bitcoin Market Insights</h1>
+          <h2>Live Price: <span id="btc-price"></span></h2>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-md-4 bearish">
+          <h3>Bearish Signals</h3>
+          <p>Description of Bearish Signals</p>
+        </div>
+        <div class="col-md-4 bullish">
+          <h3>Bullish Signals</h3>
+          <p>Description of Bullish Signals</p>
+        </div>
+        <div class="col-md-4 insights">
+          <h3>Market Insights</h3>
+          <p>Description of Market Insights</p>
+        </div>
+      </div>
     </div>
-    <div class="column" id="bearish-articles">
-      <h2>Bearish Articles</h2>
-      <!-- Bearish articles will be added here -->
-    </div>
-    <div class="column" id="market-says">
-      <h2>What the Market Says</h2>
-      <!-- Market-driven articles will be added here -->
-    </div>
-  </div>
-</body>
+  </body>
 </html>
+
+
