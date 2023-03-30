@@ -1,89 +1,46 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Bitcoin Market Insights</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-      }
-      h1 {
-        text-align: center;
-      }
-      h2 {
-        font-size: 24px;
-        font-weight: bold;
-        margin-top: 30px;
-        margin-bottom: 20px;
-      }
-      h3 {
-        font-size: 20px;
-        font-weight: bold;
-      }
-      p {
-        font-size: 16px;
-      }
-      hr {
-        border-top: 1px solid #ccc;
-        margin-top: 30px;
-        margin-bottom: 30px;
-      }
-      .row > div {
-        margin-bottom: 20px;
-      }
-      .bearish {
-        background-color: #ffb3b3;
-        padding: 20px;
-        border-radius: 5px;
-      }
-      .bullish {
-        background-color: #b3ffcc;
-        padding: 20px;
-        border-radius: 5px;
-      }
-      .insights {
-        background-color: #b3b3ff;
-        padding: 20px;
-        border-radius: 5px;
-      }
-    </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-      $(document).ready(function() {
-        // Get bitcoin price from Coingecko API
-        $.get("https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd", function(data) {
-          $("#btc-price").text("$" + data.bitcoin.usd.toLocaleString());
-        });
-      });
-    </script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <h1>Bitcoin Market Insights</h1>
-          <h2>Live Price: <span id="btc-price"></span></h2>
-        </div>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h2>Bearish Sentiment</h2>
+        <hr>
+        <p>Here you can find the latest insights and analysis from experts who are predicting a bearish market trend for Bitcoin.</p>
       </div>
-      <hr>
-      <div class="row">
-        <div class="col-md-4 bearish">
-          <h3>Bearish Signals</h3>
-          <p>Description of Bearish Signals</p>
-        </div>
-        <div class="col-md-4 bullish">
-          <h3>Bullish Signals</h3>
-          <p>Description of Bullish Signals</p>
-        </div>
-        <div class="col-md-4 insights">
-          <h3>Market Insights</h3>
-          <p>Description of Market Insights</p>
-        </div>
+      <div class="col-sm-4">
+        <h2>Bullish Sentiment</h2>
+        <hr>
+        <p>Here you can find the latest insights and analysis from experts who are predicting a bullish market trend for Bitcoin.</p>
+      </div>
+      <div class="col-sm-4">
+        <h2>Research &amp; Street Views</h2>
+        <hr>
+        <p>Here you can find research reports and opinions from the most respected research firms and Wall Street analysts.</p>
       </div>
     </div>
-  </body>
-</html>
+    <div class="row">
+      <div class="col-sm-12">
+        <hr>
+        <h3 class="text-right">Current Price: $<span id="price"></span></h3>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      getPrice();
+      setInterval(getPrice, 30000);
+    });
+
+    function getPrice() {
+      $.ajax({
+        url: "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd",
+        dataType: "json",
+        success: function(data) {
+          $("#price").text(data.bitcoin.usd.toLocaleString());
+        }
+      });
+    }
+  </script>
+</body>
 
 
