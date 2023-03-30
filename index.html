@@ -8,10 +8,9 @@
 			margin: 0;
 			padding: 0;
 			font-family: 'Montserrat', sans-serif;
-			background-color: #F7F7F7;
 		}
 		.header {
-			background-color: #F66733;
+			background-color: #1a1aff;
 			height: 50px;
 			width: 100%;
 			position: fixed;
@@ -38,9 +37,9 @@
 		}
 		.button {
 			display: inline-block;
-			padding: 15px;
+			padding: 20px;
 			margin: 20px;
-			background-color: #F66733;
+			background-color: #ff5722;
 			color: #fff;
 			font-size: 20px;
 			font-weight: 700;
@@ -56,19 +55,13 @@
 			justify-content: center;
 			align-items: center;
 		}
-		.button:nth-child(3n+1) {
-			background-color: #EEB111;
-		}
-		.button:nth-child(3n+2) {
-			background-color: #FFD662;
-		}
-		.button:nth-child(3n+3) {
-			background-color: #F66733;
-		}
 		.button:hover {
-			background-color: #fff;
-			color: #000;
+			background-color: #cc4c02;
+			color: #fff;
 			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+		}
+		.button:nth-child(2n) {
+			background-color: #cc4c02;
 		}
 		@media screen and (max-width: 768px) {
 			.button {
@@ -80,15 +73,14 @@
 </head>
 <body>
 	<div class="header">
-		<h1>KM8Projects</h1>
+		<h1 style="background-color: #002147">KM8Projects</h1>
 	</div>
 	<div class="container">
-		<a href="project1.html" class="button">PROJECT 1</a>
-		<a href="project2.html" class="button">PROJECT 2</a>
-		<a href="#" class="button">ETF</a>
-		<a href="#" class="button">PROJECT 3</a>
-		<a href="#" class="button">PROJECT 4</a>
-		<a href="#" class="button">PROJECT 5</a>
+		<a href="project1.html" class="button" style="background-color: #ff9800">PROJECT 1</a>
+		<a href="project2.html" class="button" style="background-color: #cc4c02">PROJECT 2</a>
+		<a href="#" class="button" style="background-color: #ff5722">ETF</a>
+		<a href="#" class="button" style="background-color: #d84315">PROJECT 3</a>
+		<a href="#" class="button" style="background-color: #bf360c">PROJECT 4</a>
+		<a href="#" class="button" style="background-color: #ff6f00">PROJECT 5</a>
 	</div>
 </body>
-</html>
