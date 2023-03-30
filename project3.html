@@ -1,46 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bitcoin Market Insights</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+			color: #333;
+		}
+
+		.container {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 20px;
+		}
+
+		.title {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+
+		.title h1 {
+			margin: 0;
+			font-size: 36px;
+			font-weight: normal;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		.title p {
+			margin: 0;
+			font-size: 18px;
+			font-weight: bold;
+			color: #ccc;
+			padding-top: 10px;
+			line-height: 24px;
+		}
+
+		.row {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -10px;
+		}
+
+		.column {
+			flex: 1;
+			padding: 0 10px;
+			margin-bottom: 20px;
+		}
+
+		.column h2 {
+			font-size: 24px;
+			margin: 0 0 10px;
+			color: #333;
+		}
+
+		.column p {
+			font-size: 18px;
+			margin: 0;
+			line-height: 24px;
+			color: #666;
+		}
+
+		.column .border {
+			border-left: 1px solid #ccc;
+			padding-left: 10px;
+		}
+
+		.column:last-child .border {
+			border-left: none;
+			padding-left: 0;
+		}
+
+		.live-price {
+			font-size: 24px;
+			font-weight: bold;
+			color: green;
+			text-align: right;
+		}
+
+	</style>
+</head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <h2>Bearish Sentiment</h2>
-        <hr>
-        <p>Here you can find the latest insights and analysis from experts who are predicting a bearish market trend for Bitcoin.</p>
-      </div>
-      <div class="col-sm-4">
-        <h2>Bullish Sentiment</h2>
-        <hr>
-        <p>Here you can find the latest insights and analysis from experts who are predicting a bullish market trend for Bitcoin.</p>
-      </div>
-      <div class="col-sm-4">
-        <h2>Research &amp; Street Views</h2>
-        <hr>
-        <p>Here you can find research reports and opinions from the most respected research firms and Wall Street analysts.</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <hr>
-        <h3 class="text-right">Current Price: $<span id="price"></span></h3>
-      </div>
-    </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      getPrice();
-      setInterval(getPrice, 30000);
-    });
-
-    function getPrice() {
-      $.ajax({
-        url: "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd",
-        dataType: "json",
-        success: function(data) {
-          $("#price").text(data.bitcoin.usd.toLocaleString());
-        }
-      });
-    }
-  </script>
+	<div class="container">
+		<div class="title">
+			<h1>Bitcoin Market Insights</h1>
+			<p>Get the latest insights on the Bitcoin market</p>
+			<div class="live-price">Live Price: $60,000</div>
+		</div>
+		<div class="row">
+			<div class="column">
+				<h2>Bearish Indicators</h2>
+				<p>Learn about the indicators that suggest the price of Bitcoin may be headed downward.</p>
+			</div>
+			<div class="column border">
+				<h2>Bullish Indicators</h2>
+				<p>Learn about the indicators that suggest the price of Bitcoin may be headed upward.</p>
+			</div>
+			<div class="column border">
+				<h2>Research & Street Insights</h2>
+				<p>Get the latest insights from research firms and Wall Street analysts on the future of Bitcoin.</p>
+			</div>
+		</div>
+	</div>
 </body>
-
-
+</html>
