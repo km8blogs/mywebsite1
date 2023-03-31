@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Photography Competition</title>
+  <style>
+    /* Set the background color to black and text color to white */
+    body {
+      background-color: black;
+      color: white;
+    }
+
+    /* Add styles for the header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+    }
+
+    /* Add styles for the logo */
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    /* Add styles for the navigation bar */
+    nav {
+      display: flex;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    /* Add styles
+
+
+for the main content */
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Add styles for the countdown timer */
+    #countdown {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px;
+      font-weight: bold;
+      margin-top: 50px;
+    }
+
+    /* Add styles for the footer */
+    footer {
+      text-align: center;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Add the header with the logo and navigation bar -->
+  <header>
+    <div class="logo">College Photography Competition</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Categories</a>
+      <a href="#">Jury Members</a>
+      <a href="#">Prizes</a>
+      <a href="#">Previous Winners</a>
+    </nav>
+  </header>
+
+  <!-- Add the main content with information about the competition -->
+  <main>
+    <h1>Welcome to the College Photography Competition</h1>
+    <p>Enter your best photographs to win amazing prizes and get recognized by the jury members.</p>
+    <p>The competition has several categories, including landscape, portrait, wildlife, and abstract. The entry fee is $10 per photograph.</p>
+    <p>The jury members are experts in the field of photography and will select the winners based on creativity, technical skills, and originality.</p>
+    <p>The prizes include a cash prize of $1000 for the first place winner in each category, a feature in our magazine, and an invitation to the award ceremony.</p>
+    <p>The deadline for submissions is June 1, 2023. Don't miss this opportunity to showcase your talent and win amazing prizes!</p>
+
+    <!-- Add the countdown timer -->
+    <div id="countdown"></div>
+  </main>
+
+  <!-- Add the footer -->
+  <footer>
+    &copy; 2022 College Photography Competition. All rights reserved.
+  </footer>
+
+  <!-- Add the JavaScript code for the countdown timer -->
+  <script>
+    // Set the date of the deadline
+    const deadline = new Date("June 1, 2023 00:00:00").getTime();
+
+    // Update the countdown timer every second
+    setInterval(() => {
+      // Get the current date and time
+      const now = new Date().getTime();
+
+      // Calculate the difference between the deadline and the current date and time
+      const difference = deadline - now;
+
+      // Calculate the days, hours, minutes, and seconds remaining
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      // Display the countdown timer
+      document.getElementById("countdown").innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+    }, 1000);
+  </script>
+</body>
+</html>
