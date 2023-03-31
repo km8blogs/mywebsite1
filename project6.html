@@ -1,49 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Alumni Art Co.</title>
+	<title>Clemson Memories Art Co.</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 	<style>
 		body {
 			margin: 0;
 			padding: 0;
 			font-family: 'Montserrat', sans-serif;
-			background-color: #fff;
-			color: #000;
+			background-color: #f2f2f2;
 		}
 		.header {
-			background-color: #000;
-			height: 50px;
+			background-color: #fff;
+			height: 70px;
 			width: 100%;
 			position: fixed;
 			top: 0;
 			left: 0;
 			z-index: 1;
+			display: flex;
+			align-items: center;
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 		}
 		.header h1 {
-			color: #fff;
+			color: #000;
 			font-size: 24px;
 			font-weight: 700;
 			margin: 0;
-			padding: 10px;
+			padding: 0;
 			line-height: 30px;
 			display: inline-block;
+			margin-left: 20px;
 		}
 		.container {
-			margin-top: 80px;
+			margin-top: 150px;
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
 			align-items: center;
-			height: calc(100vh - 80px);
+			height: calc(100vh - 200px);
 		}
 		.button {
 			display: inline-block;
 			padding: 20px;
 			margin: 20px;
-			background-color: #F0F0F0;
+			background-color: #f2f2f2;
 			color: #000;
-			font-size: 18px;
+			font-size: 20px;
 			font-weight: 700;
 			border-radius: 5px;
 			text-decoration: none;
@@ -54,32 +57,110 @@
 			width: calc((100% / 3) - 40px);
 			height: calc((100% / 2) - 50px);
 			display: flex;
-			justify-content: center;
+			flex-direction: column;
 			align-items: center;
+			justify-content: center;
 		}
 		.button:hover {
-			background-color: #FFCC00;
+			background-color: #ffa500;
 			color: #fff;
 			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
 		}
-		@media screen and (max-width: 768px) {
-			.button {
-				width: calc((100% / 2) - 40px);
-				height: calc((100% / 3) - 50px);
-			}
+		.about {
+			display: flex;
+			align-items: center;
+			height: 70px;
+			background-color: #ffa500;
+			color: #fff;
+			padding: 0 20px;
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+		}
+		.about h2 {
+			margin: 0;
+			font-size: 24px;
+			font-weight: 700;
+			flex-grow: 1;
+		}
+		.footer {
+			background-color: #000;
+			color: #fff;
+			height: 80px;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.footer p {
+			margin: 0;
+			font-size: 14px;
+			line-height: 20px;
 		}
 	</style>
 </head>
 <body>
-	<div class="header">
-		<h1>Alumni Art Co.</h1>
-	</div>
 	<div class="container">
-		<a href="#" class="button">Browse Colleges</a>
-		<a href="#" class="button">Browse Artwork</a>
-		<a href="#" class="button">Contact Us</a>
-	</div>
+<header>
+<nav>
+<div class="logo">
+<h1>Artifacts</h1>
+</div>
+<div class="menu">
+<ul>
+<li><a href="#">Browse Collections</a></li>
+<li><a href="#">Create My Own</a></li>
+</ul>
+</div>
+</nav>
+<div class="hero">
+<h2>Your College Memories Captured in Art</h2>
+<p>Relive your college experience by customizing your own piece of art. Choose from our collection or create your own.</p>
+<a href="#" class="cta">Get Started</a>
+</div>
+</header>
+<div class="about">
+<h3>About Us</h3>
+<p>Artifacts was founded by a group of college graduates who wanted to find a unique way to celebrate and remember their college experiences. They noticed that there were few options available for alumni to display their college memories in a way that was both personalized and elegant. Artifacts was born out of the idea of creating high-quality custom art pieces that tell the stories of students' college experiences.</p>
+<a href="#" class="cta">Learn More</a>
+</div>
+<div class="how-we-started">
+<h3>How We Started</h3>
+<p>The idea for Artifacts was first conceived when the founders were looking for a special graduation gift for a close friend. They wanted to give something that was both unique and meaningful, but they couldn't find anything that fit the bill. They decided to create a custom art piece that featured their friend's favorite places on campus, and the idea for Artifacts was born. The founders realized that there was a market for custom art pieces that captured the essence of college memories, and they decided to turn their idea into a business.</p>
+<a href="#" class="cta">Read Our Story</a>
+</div>
+<div class="faq">
+<h3>FAQ</h3>
+<ul>
+<li>
+<h4>What kind of photos can I use?</h4>
+<p>You can use any photos you have taken yourself, or that you have the rights to use. We can also provide you with a selection of high-quality stock images to choose from.</p>
+</li>
+<li>
+<h4>What is the turnaround time for custom orders?</h4>
+<p>Custom orders typically take 2-3 weeks to complete, depending on the complexity of the design and the availability of materials.</p>
+</li>
+<li>
+<h4>What is your return policy?</h4>
+<p>We offer a 30-day satisfaction guarantee. If you are not completely satisfied with your purchase, we will work with you to make it right or offer a full refund.</p>
+</li>
+</ul>
+</div>
+<footer>
+<div class="footer-info">
+<p>Artifacts © 2023. All Rights Reserved.</p>
+</div>
+<div class="social-media">
+<ul>
+<li><a href="#">Facebook</a></li>
+<li><a href="#">Twitter</a></li>
+<li><a href="#">Instagram</a></li>
+</ul>
+</div>
+</footer>
+</div>
+
 </body>
 </html>
-
 
